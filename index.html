@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">RÅSAFT</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">Om Oss</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">JUICESKOLAN</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">JOBBA MED OSS</a>
+                    </li>
+                </ul>
+                <div class="header__nav-logo"><img src="img/logo-white.png" alt="" class="header__nav-logo-img"></div>
+                <ul class="header__nav-list flex-end">
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">Kontakt</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">PANTA RÅSAFT</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">HÄR FINNS VI</a>
+                    </li>
+
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">PRESSERIET</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="app">
+        <div class="app__leaf">
+            <img src="img/leaf.png" alt="" class="app__leaf-img leaf-animation-1">
+            <img src="img/leaf.png" alt="" class="app__leaf-img leaf-animation-2">
+            <img src="img/leaf.png" alt="" class="app__leaf-img leaf-animation-3">
+            <img src="img/leaf.png" alt="" class="app__leaf-img leaf-animation-4">
+            <img src="img/leaf.png" alt="" class="app__leaf-img leaf-animation-5">
+            <img src="img/leaf.png" alt="" class="app__leaf-img leaf-animation-6">
+        </div>
+        <div class="elipse"><img src="img/elipse.png" alt=""></div>
+        <div class="cardList">
+            <button class="cardList__btn btn btn--left">
+                <div class="icon">
+                    <i class="fas fa-angle-left"></i>
+                </div>
+            </button>
+
+            <div class="cards__wrapper">
+                <div class="card current--card">
+                    <div class="card__image">
+                        <img src="img/hero-apelsin.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="card next--card">
+                    <div class="card__image">
+                        <img src="img/hero-apple.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="card previous--card">
+                    <div class="card__image">
+                        <img src="img/hero-rod.png" alt="" />
+                    </div>
+                </div>
+            </div>
+
+            <button class="cardList__btn btn btn--right">
+                <div class="icon">
+                    <i class="fas fa-angle-right"></i>
+                </div>
+            </button>
+        </div>
+
+        <div class="infoList">
+            <div class="info__wrapper">
+                <div class="info current--info">
+                    <img src="img/orange-2.png" alt="" class="limon text location layer" data-speed="3">
+                    <p class="text info-text">OBEHANDLAD OCH GALET GOD</p>
+                    <h4 class="text location">Apelsin</h4>
+                    <img src="img/orange.png" alt="" class="orange text location layer" data-speed="-3">
+                </div>
+
+                <div class="info next--info">
+                    <img src="img/limon.png" alt="" class="limon text location layer" data-speed="3">
+                    <p class="text info-text">OBEHANDLAD OCH GALET GOD</p>
+                    <h4 class="text location">Äpple</h4>
+                    <img src="img/apple.png" alt="" class="orange text location layer" data-speed="-3">
+                </div>
+
+                <div class="info previous--info">
+                    <img src="img/apple-red-2.png" alt="" class="limon text location layer" data-speed="3">
+                    <p class="text info-text">OBEHANDLAD OCH GALET GOD</p>
+                    <h4 class="text location">Röd Kärlek</h4>
+                    <img src="img/apple-red-1.png" alt="" class="orange text location layer" data-speed="-3" id="appl">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="app__bg">
+            <div class="app__bg__image current--image">
+            </div>
+            <div class="app__bg__image next--image">
+            </div>
+            <div class="app__bg__image previous--image">
+            </div>
+        </div>
+    </div>
+
+    <section class="products" id="products">
+        <h1 class="products__heading" data-aos="fade-in" data-aos-once="true" data-aos-duration="800"
+            data-aos-delay="500" data-aos-easing="ease">JUICE FRÅN SCRATCH
+        </h1>
+        <div class="container">
+            <div class="products__wrapper">
+                <div class="product" data-aos="fade-in" data-aos-once="true" data-aos-duration="800"
+                    data-aos-delay="500" data-aos-easing="ease-in">
+                    <div class="product-effect">
+                        <div class="product__bg"></div>
+                        <div class="product__image">
+                            <img src="img/hero-apelsin.png" alt="" class="product__image-img">
+                        </div>
+                        <div class="product__content">
+                            <h3 class="product__content-heading">Apelsin</h3>
+                        </div>
+                        <div class="product__content-search"></div>
+                    </div>
+                </div>
+                <div class="product" data-aos="fade-in" data-aos-once="true" data-aos-duration="900"
+                    data-aos-delay="700" data-aos-easing="ease-in">
+                    <div class="product-effect">
+                        <div class="product__bg"></div>
+                        <div class="product__image">
+                            <img src="img/hero-apple.png" alt="" class="product__image-img">
+                        </div>
+                        <div class="product__content">
+                            <h3 class="product__content-heading">Äpple</h3>
+                        </div>
+                        <div class="product__content-search"></div>
+                    </div>
+                </div>
+                <div class="product" data-aos="fade-in" data-aos-once="true" data-aos-duration="1000"
+                    data-aos-delay="900" data-aos-easing="ease-in">
+                    <div class="product-effect">
+                        <div class="product__bg"></div>
+                        <div class="product__image">
+                            <img src="img/hero-rod.png" alt="" class="product__image-img">
+                        </div>
+                        <div class="product__content">
+                            <h3 class="product__content-heading">Röd Kärlek</h3>
+                        </div>
+                        <div class="product__content-search"></div>
+                    </div>
+                </div>
+                <div class="product" data-aos="fade-in" data-aos-once="true" data-aos-duration="1100"
+                    data-aos-delay="1100" data-aos-easing="ease-in">
+                    <div class="product-effect">
+                        <div class="product__bg"></div>
+                        <div class="product__image">
+                            <img src="img/hero-apelsin.png" alt="" class="product__image-img">
+                        </div>
+                        <div class="product__content">
+                            <h3 class="product__content-heading">Apelsin</h3>
+                        </div>
+                        <div class="product__content-search"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="products__wrapper margin-top">
+                <div class="product" data-aos="fade-in" data-aos-once="true" data-aos-duration="800"
+                    data-aos-delay="500" data-aos-easing="ease-in">
+                    <div class="product-effect">
+                        <div class="product__bg"></div>
+                        <div class="product__image">
+                            <img src="img/hero-apple.png" alt="" class="product__image-img">
+                        </div>
+                        <div class="product__content">
+                            <h3 class="product__content-heading">Äpple</h3>
+                        </div>
+                        <div class="product__content-search"></div>
+                    </div>
+                </div>
+                <div class="product" data-aos="fade-in" data-aos-once="true" data-aos-duration="900"
+                    data-aos-delay="700" data-aos-easing="ease-in">
+                    <div class="product-effect">
+                        <div class="product__bg"></div>
+                        <div class="product__image">
+                            <img src="img/hero-rod.png" alt="" class="product__image-img">
+                        </div>
+                        <div class="product__content">
+                            <h3 class="product__content-heading">Röd Kärlek</h3>
+                        </div>
+                        <div class="product__content-search"></div>
+                    </div>
+                </div>
+                <div class="product" data-aos="fade-in" data-aos-once="true" data-aos-duration="1000"
+                    data-aos-delay="900" data-aos-easing="ease-in">
+                    <div class="product-effect">
+                        <div class="product__bg"></div>
+                        <div class="product__image">
+                            <img src="img/hero-apelsin.png" alt="" class="product__image-img">
+                        </div>
+                        <div class="product__content">
+                            <h3 class="product__content-heading">Apelsin</h3>
+                        </div>
+                        <div class="product__content-search"></div>
+                    </div>
+                </div>
+                <div class="product" data-aos="fade-in" data-aos-once="true" data-aos-duration="1100"
+                    data-aos-delay="1100" data-aos-easing="ease-in">
+                    <div class="product-effect">
+                        <div class="product__bg"></div>
+                        <div class="product__image">
+                            <img src="img/hero-apple.png" alt="" class="product__image-img">
+                        </div>
+                        <div class="product__content">
+                            <h3 class="product__content-heading">Äpple</h3>
+                        </div>
+                        <div class="product__content-search"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner" id="banner">
+        <div class="container">
+            <div class="banner__img-2" data-aos="fade-in" data-aos-once="true" data-aos-duration="800"
+                data-aos-delay="350" data-aos-easing="ease-in"><img src="img/banner-2.png" alt=""
+                    class="banner__img-2-img"></div>
+            <div class="banner__img" data-aos="fade-in" data-aos-once="true" data-aos-duration="800"
+                data-aos-delay="400" data-aos-easing="ease-in"><img src="img/banner.png" alt="" class="banner__img-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="video">
+        <div class="container">
+            <div class="box box-1" data-aos="fade-in" data-aos-once="true" data-aos-duration="800" data-aos-delay="400"
+                data-aos-easing="ease-in"><video src="img/vidos.mp4" autoplay muted loop></video></div>
+            <img src="img/decor-2.svg" alt="" class="decor-2">
+        </div>
+    </section>
+
+    <section class="team">
+        <h1 class="products__heading team-heading" data-aos="fade-in" data-aos-once="true" data-aos-duration="800"
+            data-aos-delay="500" data-aos-easing="ease">Juicepressarna
+        </h1>
+        <div class="container">
+            <div class="team__wrapper margin-bottom">
+                <div class="team-person" data-aos="fade-in" data-aos-once="true" data-aos-duration="800"
+                    data-aos-delay="500" data-aos-easing="ease-in">
+                    <div class="team-effect">
+                        <div class="">
+                            <img src="img/team-1.jpg" alt="" class="team-person-img">
+                        </div>
+                        <div class="team-wrapperrr">
+                            <h3>FABRIKÖR HANSSON</h3>
+                            <p>VD & JUICEPRESSARE</p>
+                            <p>070 373 54 41</p>
+                            <p>karl@loviseberg.se</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-person" data-aos="fade-in" data-aos-once="true" data-aos-duration="900"
+                    data-aos-delay="700" data-aos-easing="ease-in">
+                    <div class="team-effect">
+                        <div class="">
+                            <img src="img/team-2.jpg" alt="" class="team-person-img">
+                        </div>
+                        <div class="team-wrapperrr">
+                            <h3>JOHANNES NILSSON</h3>
+                            <p>SÄLJANDE DISTRIBUTIONSCHEF</p>
+                            <p>073 025 77 37 </p>
+                            <p>johannes@loviseberg.se</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-person" data-aos="fade-in" data-aos-once="true" data-aos-duration="1000"
+                    data-aos-delay="900" data-aos-easing="ease-in">
+                    <div class="team-effect">
+                        <div class="">
+                            <img src="img/team-3.jpg" alt="" class="team-person-img">
+                        </div>
+                        <div class="team-wrapperrr">
+                            <h3>AHMAD ABUHEJAB</h3>
+                            <p>DISTRIBUTION STOCKHOLM</p>
+                            <p>070 325 97 40</p>
+                            <p>ahmad@loviseberg.se</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-person" data-aos="fade-in" data-aos-once="true" data-aos-duration="1100"
+                    data-aos-delay="1100" data-aos-easing="ease-in">
+                    <div class="team-effect">
+                        <div class="">
+                            <img src="img/team-4.jpg" alt="" class="team-person-img">
+                        </div>
+                        <div class="team-wrapperrr">
+                            <h3>MATILDA PETTERSON</h3>
+                            <p>KONTORSCHEF & JUICENÖRD</p>
+                            <p>070 771 12 10</p>
+                            <p>matilda@loviseberg.se</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team__wrapper margin-bottom">
+                <div class="team-person" data-aos="fade-in" data-aos-once="true" data-aos-duration="800"
+                    data-aos-delay="500" data-aos-easing="ease-in">
+                    <div class="team-effect">
+                        <div class="">
+                            <img src="img/team-5.jpg" alt="" class="team-person-img">
+                        </div>
+                        <div class="team-wrapperrr">
+                            <h3>WASIM SHBIB</h3>
+                            <p>JUICEPRESSEXPERT &<br> UPPFINNARE</p>
+                            <p>085 010 09 40</p>
+                            <p>wasim@loviseberg.se</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-person" data-aos="fade-in" data-aos-once="true" data-aos-duration="900"
+                    data-aos-delay="700" data-aos-easing="ease-in">
+                    <div class="team-effect">
+                        <div class="">
+                            <img src="img/team-6.jpg" alt="" class="team-person-img">
+                        </div>
+                        <div class="team-wrapperrr">
+                            <h3>MISCHA HELMINEN</h3>
+                            <p>MARKNAD & JUICEKOMMUNIKATÖR</p>
+                            <p>072 898 24 67</p>
+                            <p>mischa@loviseberg.se</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-person" data-aos="fade-in" data-aos-once="true" data-aos-duration="1000"
+                    data-aos-delay="900" data-aos-easing="ease-in">
+                    <div class="team-effect">
+                        <div class="">
+                            <img src="img/team-8.jpg" alt="" class="team-person-img">
+                        </div>
+                        <div class="team-wrapperrr">
+                            <h3>CAROLINA LINDVALL</h3>
+                            <p>SÄLJ,<br> STOCKHOLM</p>
+                            <p>072 898 25 25</p>
+                            <p>carolina@loviseberg.se</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-person" data-aos="fade-in" data-aos-once="true" data-aos-duration="1100"
+                    data-aos-delay="1100" data-aos-easing="ease-in">
+                    <div class="team-effect">
+                        <div class="">
+                            <img src="img/team-7.jpg" alt="" class="team-person-img">
+                        </div>
+                        <div class="team-wrapperrr">
+                            <h3>HANNA WILLIAMS</h3>
+                            <p>SÄLJ,<br> MARKNAD & RÅ-NYTTIG</p>
+                            <p>072 898 25 25</p>
+                            <p>hanna.williams@loviseberg.se</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team__wrapper margin-bottom">
+                <div class="team-person" data-aos="fade-in" data-aos-once="true" data-aos-duration="800"
+                    data-aos-delay="500" data-aos-easing="ease-in">
+                    <div class="team-effect">
+                        <div class="">
+                            <img src="img/team-9.jpg" alt="" class="team-person-img">
+                        </div>
+                        <div class="team-wrapperrr">
+                            <h3>PIA LIVERBRO</h3>
+                            <p>EKONOMI & JUICEONOM</p>
+                            <p>072 897 60 76</p>
+                            <p>pia@loviseberg.se</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-person" data-aos="fade-in" data-aos-once="true" data-aos-duration="900"
+                    data-aos-delay="700" data-aos-easing="ease-in">
+                    <div class="team-effect">
+                        <div class="">
+                            <img src="img/team-10.jpg" alt="" class="team-person-img">
+                        </div>
+                        <div class="team-wrapperrr">
+                            <h3>CECILIA LUND</h3>
+                            <p>KAMPANJ & JUICEPRESENTATÖR</p>
+                            <p>072 853 27 02</p>
+                            <p>cecilia@loviseberg.se</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-person" data-aos="fade-in" data-aos-once="true" data-aos-duration="1000"
+                    data-aos-delay="900" data-aos-easing="ease-in">
+                    <div class="team-effect">
+                        <div class="">
+                            <img src="img/team-11.jpg" alt="" class="team-person-img">
+                        </div>
+                        <div class="team-wrapperrr">
+                            <h3>ISABELLA LIVEHED</h3>
+                            <p>KAMPANJ & JUICEPRESENTATÖR</p>
+                            <p>072 896 41 28</p>
+                            <p>isabella@loviseberg.se</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-person" data-aos="fade-in" data-aos-once="true" data-aos-duration="1100"
+                    data-aos-delay="1100" data-aos-easing="ease-in">
+                    <div class="team-effect">
+                        <div class="">
+                            <img src="img/team-12.jpg" alt="" class="team-person-img">
+                        </div>
+                        <div class="team-wrapperrr">
+                            <h3>ZSOLT PAPAY</h3>
+                            <p>INKÖP & ÄPPELEXPERT</p>
+                            <p>070 509 52 79</p>
+                            <p>zsolt@loviseberg.se</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team__wrapper">
+                <div class="team-person" data-aos="fade-in" data-aos-once="true" data-aos-duration="800"
+                    data-aos-delay="500" data-aos-easing="ease-in">
+                    <div class="team-effect">
+                        <div class="">
+                            <img src="img/team-13.jpg" alt="" class="team-person-img">
+                        </div>
+                        <div class="team-wrapperrr">
+                            <h3>JONAS REIMERSON</h3>
+                            <p>SÄLJ HORECA<br> STOCKHOLM</p>
+                            <p>073 026 47 08</p>
+                            <p>jonas@loviseberg.se</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-person" data-aos="fade-in" data-aos-once="true" data-aos-duration="900"
+                    data-aos-delay="700" data-aos-easing="ease-in">
+                    <div class="team-effect">
+                        <div class="">
+                            <img src="img/team-14.jpg" alt="" class="team-person-img">
+                        </div>
+                        <div class="team-wrapperrr">
+                            <h3>PATRIK SÖDERBOM</h3>
+                            <p>TEAMLEDARE & SÄLJ<br> GÖTEBORG</p>
+                            <p>070 438 89 05</p>
+                            <p>patrik@loviseberg.se</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-person" data-aos="fade-in" data-aos-once="true" data-aos-duration="1000"
+                    data-aos-delay="900" data-aos-easing="ease-in">
+                    <div class="team-effect">
+                        <div class="">
+                            <img src="img/team-15.jpg" alt="" class="team-person-img">
+                        </div>
+                        <div class="team-wrapperrr">
+                            <h3>BANU SELVAKATHIRAMALAI</h3>
+                            <p>TRAFIKSAMORDNARE &<br> JUICEHJÄLPARE</p>
+                            <p>08 501 006 40</p>
+                            <p>banu@loviseberg.se</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-person" data-aos="fade-in" data-aos-once="true" data-aos-duration="1100"
+                    data-aos-delay="1100" data-aos-easing="ease-in">
+                    <div class="team-effect">
+                        <div class="">
+                            <img src="img/team-16.jpg" alt="" class="team-person-img">
+                        </div>
+                        <div class="team-wrapperrr">
+                            <h3>OSCAR THEANDER</h3>
+                            <p>TRAFIKSAMORDNARE &<br> JUICESMAKARE</p>
+                            <p>072 897 52 36</p>
+                            <p>oscar@loviseberg.se</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__logo"><img src="img/logo-white.png" alt="" class="footer__logo-img"></div>
+                <nav class="footer__nav">
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item">
+                            <a href="#" class="footer__nav-link">RÅSAFT</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#" class="footer__nav-link">Om Oss</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#" class="footer__nav-link">PRESSERIET</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#" class="footer__nav-link">JUICESKOLAN</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#" class="footer__nav-link">PANTA RÅSAFT</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#" class="footer__nav-link">Kontakt</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#" class="footer__nav-link">Jobba Med Oss</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="copyright">
+                    <p class="copyright__text">©2022 RÅSAFT - Alla rättigheter reserverade.</p>
+                </div>
+                <!-- <nav class="footer__social">
+                    <ul class="footer__social-list">
+                        <li class="footer__social-item">
+                            <a href="#" class="footer__social-link"><img src="" alt="" class="footer__social-img"></a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a href="#" class="footer__social-link"><img src="" alt="" class="footer__social-img"></a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a href="#" class="footer__social-link"><img src="" alt="" class="footer__social-img"></a>
+                        </li>
+                    </ul>
+                </nav> -->
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="//code.tidio.co/yjozwgglvgruoygxbjg64sj3vxqj0lnt.js" async></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
